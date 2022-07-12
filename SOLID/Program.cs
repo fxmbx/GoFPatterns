@@ -1,7 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Diagnostics;
-using SOLID.O;
-using SOLID.S;
+using SOLID.OCP;
+using SOLID.SRP;
 
 // Console.WriteLine("Hello, World!");
 
@@ -22,14 +22,14 @@ var p = new Persistence();
 
 */
 
+
+
+
 /* OPEN-CLOSED */
-
-
-
 var apple = new Product("Apple", Color.Green, Size.Small);
 var tree = new Product("Tree", Color.Green, Size.Medium);
 var bag = new Product("Hermes", Color.Red, Size.Large);
-var house = new Product("House", Color.Blue, Size.Yuge);
+var house = new Product("House", Color.Blue, Size.Large);
 
 
 Product[] products = {apple, tree, bag, house};
@@ -56,7 +56,7 @@ foreach(var p in bf.Filter(products, new SizeSpecification(Size.Medium))){
 }
 
     Console.WriteLine("Large blue Items");
-    foreach(var p in bf.Filter(products, new ANDSpecification<Product>( new ColorSpecification(Color.Blue), new SizeSpecification(Size.Yuge)))){
+    foreach(var p in bf.Filter(products, new ANDSpecification<Product>( new ColorSpecification(Color.Blue), new SizeSpecification(Size.Large)))){
     Console.WriteLine($" - {p.Name} is Blue and Large");
     }
 

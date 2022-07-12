@@ -1,18 +1,20 @@
-namespace SOLID.S
+namespace SOLID.SRP
 {
     public class Journal
     {
         private readonly List<string> Entries = new List<string>();
 
-        private static int count =0;
+        private static int count = 0;
 
 
-        public int AddEntry(string entry){
+        public int AddEntry(string entry)
+        {
             Entries.Add($"{++count}: {entry}");
-            return count; 
+            return count;
         }
 
-        public void RemoveEntry(int index){
+        public void RemoveEntry(int index)
+        {
             Entries.RemoveAt(index);
         }
 
@@ -28,9 +30,11 @@ namespace SOLID.S
 
     }
     //this class creates a seperation of concerns
-    public class Persistence{
-        public void SaveToFIle(Journal j, string filename, bool overwrite = false){
-            if(overwrite || File.Exists(filename))
+    public class Persistence
+    {
+        public void SaveToFIle(Journal j, string filename, bool overwrite = false)
+        {
+            if (overwrite || File.Exists(filename))
                 File.WriteAllText(filename, j.ToString());
         }
     }

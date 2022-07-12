@@ -1,11 +1,12 @@
-namespace SOLID.O
+namespace SOLID.OCP
 {
     public class BetterFilter : IFilter<Product>
     {
         public IEnumerable<Product> Filter(IEnumerable<Product> items, ISpecification<Product> spec)
         {
-            foreach(var a in items){
-                if(spec.IsSatisfied(a))
+            foreach (var a in items)
+            {
+                if (spec.IsSatisfied(a))
                     yield return a;
             }
         }

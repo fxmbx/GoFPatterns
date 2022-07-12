@@ -1,7 +1,7 @@
-namespace SOLID.O
+namespace SOLID.OCP
 {
     public interface ISpecification<T>
     {
-         bool IsSatisfied(T t);
+        bool IsSatisfied(T t);
     }
 }
