@@ -3,6 +3,7 @@ using System.Diagnostics;
 using SOLID.LSP;
 using SOLID.OCP;
 using SOLID.SRP;
+using SOLID.DIP;
 
 // Console.WriteLine("Hello, World!");
 
@@ -64,7 +65,7 @@ foreach(var p in bf.Filter(products, new ANDSpecification<Product>( new ColorSpe
 
 
 
-/*LISKOV SUBSTITUITION PRINCIPLE*/
+/*LISKOV SUBSTITUITION PRINCIPLE
 
 static int Area(Rectangle r)=> r.Width *r.Height;
 var rc = new Rectangle(10,20);
@@ -74,3 +75,32 @@ Console.WriteLine("{0} has Area : {1}",rc, Area(rc));
 Rectangle sq = new Square();
 sq.Width =4;
 Console.WriteLine("{0} has Area : {1}",sq, Area(sq));
+
+*/
+
+
+/*DEPENDENCY INVERSION */
+// class Research {
+    // public Research(Relationships relationships)
+    // {
+    //     var relations = relationships.Relations;
+    //     foreach (var item in relations.Where(x=>x.Item1.Name == "John" && x.Item2 == Relationship.Parent))
+    //     {
+    //         System.Console.WriteLine("John has a child called{0}", item.Item3.Name);
+    //     }
+    // }
+
+    // static void Main(string[] args){ 
+        // var parent = new Person {Name="John snow"};
+        // var child1 = new Person {Name="Mary snow"};
+        // var child2 = new Person {Name="Johnathan snow"};
+
+
+        // var relationships = new Relationships();
+        // relationships.AddParentAndChild(parent, child1);
+        // relationships.AddParentAndChild(parent, child2);
+
+        // new Research(relationships);
+
+    // }
+// }

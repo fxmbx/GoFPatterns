@@ -14,4 +14,4 @@ promote inheritance, interfaces and creating generic objects
 
 Interface seperation of concerns so classes don't enforce methods they dont need by force
 
-## D-Dependency Inversion Principle
+## D-Dependency Inversion Principle specifies that high level parts of the system should not depend on low level directly instead they should go through a form of abstraction. Entities must depend on abstractions, not on concretions. It states that the high-level module must not depend on the low-level module, but they should depend on abstractions.
