@@ -1,0 +1,3 @@
+1: I wasted time with a mish video today
+2: I started design patterns today
+3: Single-Responsibility Principle creates a seperation of concern, making one class have only one job
