@@ -8,7 +8,7 @@ this most times results in seperation of concerns
 
 promote inheritance, interfaces and creating generic objects
 
-## L-Liskov Substituition Principle
+## L-Liskov Substituition Principle specifies that every derived class should be substitutable for their parent class
 
 ## I-Interface Segregation Principle
 

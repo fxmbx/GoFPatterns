@@ -1,12 +1,12 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System.Diagnostics;
+using SOLID.LSP;
 using SOLID.OCP;
 using SOLID.SRP;
 
 // Console.WriteLine("Hello, World!");
 
 /* SINGLE-RESPONSIBILITY
-
 
 var j = new Journal();
 j.AddEntry("I wasted time with a mish video today");
@@ -16,35 +16,34 @@ j.AddEntry("Single-Responsibility Principle creates a seperation of concern, mak
 
 var filename =  "/Users/aurora/Funbi_Node_Tut/DesignPatterns/SOLID/journal.txt";
 var p = new Persistence();
-// Process.Start(filename);
-
-// Console.WriteLine(j); 
 
 */
 
 
 
 
-/* OPEN-CLOSED */
+/* OPEN-CLOSED 
+
 var apple = new Product("Apple", Color.Green, Size.Small);
 var tree = new Product("Tree", Color.Green, Size.Medium);
 var bag = new Product("Hermes", Color.Red, Size.Large);
 var house = new Product("House", Color.Blue, Size.Large);
 
-
 Product[] products = {apple, tree, bag, house};
 
 var pf = new ProductFilter();
+
 System.Console.WriteLine("Grenn products (old)");
+
 foreach( var p in pf.FilterByColor(products, Color.Green)){
     Console.WriteLine($" - {p.Name} is green");
 }
 
 
-
-
 System.Console.WriteLine("Green products (New way following Open-Closed)");
+
 var bf = new BetterFilter();
+
 foreach(var p in bf.Filter(products, new ColorSpecification(Color.Green))){
     Console.WriteLine($" - {p.Name} is green");
 
@@ -55,8 +54,23 @@ foreach(var p in bf.Filter(products, new SizeSpecification(Size.Medium))){
 
 }
 
-    Console.WriteLine("Large blue Items");
-    foreach(var p in bf.Filter(products, new ANDSpecification<Product>( new ColorSpecification(Color.Blue), new SizeSpecification(Size.Large)))){
+Console.WriteLine("Large blue Items");
+foreach(var p in bf.Filter(products, new ANDSpecification<Product>( new ColorSpecification(Color.Blue), new SizeSpecification(Size.Large)))){
     Console.WriteLine($" - {p.Name} is Blue and Large");
-    }
+}
 
+*/
+
+
+
+
+/*LISKOV SUBSTITUITION PRINCIPLE*/
+
+static int Area(Rectangle r)=> r.Width *r.Height;
+var rc = new Rectangle(10,20);
+Console.WriteLine("{0} has Area : {1}",rc, Area(rc));
+
+
+Rectangle sq = new Square();
+sq.Width =4;
+Console.WriteLine("{0} has Area : {1}",sq, Area(sq));
