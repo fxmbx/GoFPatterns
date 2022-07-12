@@ -10,6 +10,8 @@ promote inheritance, interfaces and creating generic objects
 
 ## L-Liskov Substituition Principle specifies that every derived class should be substitutable for their parent class
 
-## I-Interface Segregation Principle
+## I-Interface Segregation Principle specifies that a client should never be forced to implement an interface that it doesn’t use.
+
+Interface seperation of concerns so classes don't enforce methods they dont need by force
 
 ## D-Dependency Inversion Principle
