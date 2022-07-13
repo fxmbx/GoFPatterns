@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SOLID", "Solid\SOLID.csproj", "{7B43E321-943C-417A-BC88-78EC7B0F06E3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Creational", "Creational\Creational.csproj", "{BA3DA3AA-835D-41AC-869B-F0AEE7FC1169}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B43E321-943C-417A-BC88-78EC7B0F06E3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B43E321-943C-417A-BC88-78EC7B0F06E3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B43E321-943C-417A-BC88-78EC7B0F06E3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B43E321-943C-417A-BC88-78EC7B0F06E3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA3DA3AA-835D-41AC-869B-F0AEE7FC1169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA3DA3AA-835D-41AC-869B-F0AEE7FC1169}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA3DA3AA-835D-41AC-869B-F0AEE7FC1169}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA3DA3AA-835D-41AC-869B-F0AEE7FC1169}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
