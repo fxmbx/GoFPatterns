@@ -3,6 +3,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Builder;
 using Builder.FluentBuilder;
+using Builder.StepwiseBuilder;
 
 //LIFE WITHOUT BUILDERS such a mess 
 //StringBuilder() is a low level builder interface. see journey just to create small list
@@ -38,3 +39,12 @@ var me =  Person.New.Called("Funbi").WorksAs("dev").Build();
 // var builder1 = new PersonJobBuilder();
 // builder1.Called("john").WorksAs("Carpenter");
 System.Console.WriteLine(me);
+
+
+//Stepwise building 
+//the only method we can call at each point is the next method in the building process
+var car = CarBuilder.Create() //ISpecifyCarType
+    .OfType(CarType.Honda) //ISpecifyWheelSize
+    .WithWheels(18) //IBuilder
+    .Build();
+System.Console.WriteLine(car);
