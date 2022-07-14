@@ -25,6 +25,7 @@ namespace Builder
         }
 
         private string ToStringImplementation(int indent){
+            //looking at the stringbuilder interface, the functions like Append() return the StringBuilder type this is to allow you chain methods together e.g Append("foo").Append("chi") 
             var sb = new StringBuilder();
             var indt = new string(' ', indent* indentSize);
             sb.AppendLine($"{indt}<{Name}>");

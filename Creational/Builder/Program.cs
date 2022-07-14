@@ -2,6 +2,7 @@
 using System.Text;
 using System.Threading.Tasks;
 using Builder;
+using Builder.FluentBuilder;
 
 //LIFE WITHOUT BUILDERS such a mess 
 //StringBuilder() is a low level builder interface. see journey just to create small list
@@ -26,7 +27,14 @@ using Builder;
 
 
 var builder = new HtmlBuilder("ul");
-builder.AddChild("li", "list item one");
-builder.AddChild("li", "list item two");
+//nor fluent interface
+builder.AddChild("li", "list item one").AddChild("li", "list item two");
 builder.ToString();
 System.Console.WriteLine(builder.ToString());
+
+
+//boxed up fluent interface using recursive generics
+var me =  Person.New.Called("Funbi").WorksAs("dev").Build();
+// var builder1 = new PersonJobBuilder();
+// builder1.Called("john").WorksAs("Carpenter");
+System.Console.WriteLine(me);
