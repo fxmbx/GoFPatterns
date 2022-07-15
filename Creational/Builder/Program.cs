@@ -5,6 +5,7 @@ using Builder;
 using Builder.FluentBuilder;
 using Builder.StepwiseBuilder;
 using Builder.FunctionalBuilder;
+using Builder.FacadeBuilder;
 
 //LIFE WITHOUT BUILDERS such a mess 
 //StringBuilder() is a low level builder interface. see journey just to create small list
@@ -58,3 +59,13 @@ var character = new CharacterBuilder()
     .PlaysAs("under dog king").Build();
 
 System.Console.WriteLine("FUNCTIONAL BUILDER \n{0}\n",character.Name,character.Position);
+
+
+//Facade Builders
+var contactBuilder = new ContactBuilder();
+var contact = contactBuilder
+    .Works.At("Google").AsA("Developer").Earning(300000)
+    .Lives.At("first generation estate").In("Abuja").WithPostCode("AMAC 10 lol").Build();
+
+System.Console.WriteLine("FACADE BUILDER \n{0}\n",contact);
+
