@@ -10,7 +10,7 @@ namespace Factory
             return this;
         }
         public static Task<AsyncFactory> CreateAsync(){
-            var result = new Foo();
+            var result = new AsyncFactory();
             return result.InitAsync();
         }
     }
