@@ -1,6 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using System;
+using System.Runtime.InteropServices;
 using Factory;
+using Factory.AbstractFactory;
 using Factory.FactoryClasses;
 using Factory.ObjectTrackingBulkReplacement;
 
@@ -22,3 +24,9 @@ var magicTheme = factory2.CreateTheme(true);
 Console.WriteLine(magicTheme.Value.BgrColor);
 factory2.ReplaceTheme(false);
 Console.WriteLine(magicTheme.Value.BgrColor);
+
+
+//Abstract factories
+var machine = new HotDrinkMachine();
+var drink = machine.MakeDrink();
+// drink.Consume();
