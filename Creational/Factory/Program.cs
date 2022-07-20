@@ -4,7 +4,8 @@ using Factory;
 using Factory.FactoryClasses;
 using Factory.ObjectTrackingBulkReplacement;
 
-var point = PointFactory.NewPolarPoint(1.0, Math.PI/2);
+// var point = PointFactory.NewPolarPoint(1.0, Math.PI/2);
+var point = Point.Factory.NewPolarPoint(1.0, Math.PI/2);
 Console.WriteLine(point);
 
 AsyncFactory x = await AsyncFactory.CreateAsync();
